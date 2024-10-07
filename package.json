@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "color": "^4.2.3",
-    "simple-node-logger": "^21.8.12"
+    "express": "^4.21.0",
+     "simple-node-logger": "^21.8.12"
   }
 }
