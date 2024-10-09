@@ -1,13 +1,7 @@
-const http = require('http');
-const data = require('./data');
-http.createServer((req, res)=>{
-    res.writeHead(200,{'Content-Type':'application/json'});
-    res.write(JSON.stringify(data));
-    res.end();
-}).listen(5000);
+const {MongoClient} = require(mongodb); 
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
 
 
-// http.createServer((req, res)=>{
-//     res.write("<h1>Hello this is ram</h1>");
-//     res.end();
-// }).listen(5000);
+
+
