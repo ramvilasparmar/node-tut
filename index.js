@@ -1,7 +1,17 @@
-const {MongoClient} = require(mongodb); 
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+const dbConnect = require('./mongodb');
+
+// dbConnect().then((resp)=>{
+//     resp.find({}).toArray().then((data)=>{
+//         console.warn(data)
+//     })
+// })
+// console.log(dbConnect());
 
 
+const main = async ()=>{
+    let data = await dbConnect();
+    data = await data.find().toArray();
+    console.warn(data)
+}
 
-
+main();
