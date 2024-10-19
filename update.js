@@ -1,7 +1,7 @@
 const res = require('express/lib/response');
 const dbConnect = require('./mongodb');
 
-const updateData= async()=>{
+const updateData = async()=>{
     let db = await dbConnect();
     let result = await db.updateOne(
         { name:'max pro 6' },{
